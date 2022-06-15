@@ -32,7 +32,7 @@ module.exports = async function () {
 				title: element.fields.Name,
 				date: element.fields.Date,
 				type: element.fields.Type,
-				comments: element.fields.Notes,
+				description: element.fields.Notes,
 				link: element.fields.PJ[0].url,
 			};
 
