@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Krokee/client-portal#readme",
   "dependencies": {
+    "@11ty/eleventy-fetch": "^3.0.0",
     "@11ty/eleventy-navigation": "^0.3.3"
   }
 }
