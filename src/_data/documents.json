@@ -1,0 +1,16 @@
+[
+	{
+		"title": "CR Réunion Kickoff",
+		"date": "2022-06-15",
+		"type": "Compte-rendu",
+		"comments": "Compte-rendu de la réunion Réunion de Kickoff du projet de refonte du site IPAMAC",
+		"link": "/documents/2022-06-15-CR"
+	},
+	{
+		"title": "Maquette",
+		"date": "2022-06-15",
+		"type": "Lien",
+		"comments": "Maquette du site IPAMAC - Réponse à Appel d'Offres",
+		"link": "https://ipamac.keeply.fr"
+	}
+]
