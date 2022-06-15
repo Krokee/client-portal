@@ -8,9 +8,18 @@ title: This is CLIENT Portal
 <body>
 	{% include "header.njk" %}
 
+<main>
+
 		<h2>Membres de l'équipe</h2>
 		{% include "teammates.njk" %}
 
+
+		<h2>Tâches</h2>
+		{% for item in collections.tasks %}
+			{{ item.templateContent | safe }}
+		{% endfor %}
+
+</main>
 	{% include "footer.njk" %}
 </body>
 </html>
