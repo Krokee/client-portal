@@ -13,13 +13,22 @@ layout: "base.njk"
 {% endfor %}
 
 <h2>Documents</h2>
+<ul>
 {% for document in documents %}
-	{{document.title}}
+	<li>
+		<a href="{{document.link}}" target="_blank" rel="noopener noreferrer">
+		{{document.title}}
+		</a>
+	</li>
 {% endfor %}
+</ul>
 
-
-
-<h2>Documents</h2>
-{% for document in documentsAirtable %}
-	{{document.title}}
+<h2>Liens utiles</h2>
+<ul>
+{% for link in links %}
+	<li>
+		<a href="{{link.url}}" target="_blank" rel="noopener noreferrer">{{link.name}}</a> 
+	</li>
 {% endfor %}
+</ul>
+

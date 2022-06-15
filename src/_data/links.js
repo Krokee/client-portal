@@ -6,12 +6,12 @@ module.exports = async function () {
 	// This API Key is READONLY, on public data, this is under control	
 	const API_KEY = 'keygc919YSkuyLBXY';
 	const BASE_ID = 'app2RUotDJV0yzK71';
-	const TABLE_ID = 'tbl7oLWMpNVPqean5';
+	const TABLE_ID = 'tblVpQR6kCncGNQkO';
 	const VIEW = "ALL";
 
 
 	let json = await EleventyFetch(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}?maxRecords=100&view=${VIEW}`, {
-		duration: "1m",
+		duration: "15m",
 		type: "json",
 		verbose: true,
 		fetchOptions: {
@@ -22,27 +22,22 @@ module.exports = async function () {
 		}
 	});
 
-	const documents = [];
+	const links = [];
 
 	for (const key in json.records) {
 		if (Object.hasOwnProperty.call(json.records, key)) {
 			const element = json.records[key];
 
-			console.log(element);
-
-			const document = {
-				title: element.fields.Name,
-				date: element.fields.Date,
-				type: element.fields.Type,
-				comments: element.fields.Notes,
-				// link: element.fields.Category,
+			const link = {
+				name: element.fields.Name,
+				url: element.fields.URL,
 			};
 
-			documents.push(document);
+			links.push(link);
 
 		}
 	}
 
-	return documents.sort((a, b) => a.date - b.date);
+	return links;
 
 }
