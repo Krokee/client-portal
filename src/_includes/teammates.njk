@@ -1,0 +1,9 @@
+<ul>
+{% for teammate in collections.teammates %}
+
+	<li>
+	{{teammate.data.name}} ({{teammate.data.role}})
+		<a href="mailto:{{teammate.data.email}}">email</a>
+	 - <a href="{{teammate.data.site}}" target="_blank" rel="noopener noreferrer">site</a></li>
+{% endfor %}
+</ul>

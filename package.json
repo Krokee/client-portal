@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Krokee/client-portal/issues"
   },
-  "homepage": "https://github.com/Krokee/client-portal#readme"
+  "homepage": "https://github.com/Krokee/client-portal#readme",
+  "dependencies": {
+    "@11ty/eleventy-navigation": "^0.3.3"
+  }
 }
