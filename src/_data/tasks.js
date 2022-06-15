@@ -33,7 +33,8 @@ module.exports = async function () {
 
 			const task = {
 				name: element.fields.Name,
-				url: element.fields.URL,
+				done: element.fields.isdone ? true : false,
+				actor: element.fields.ACTOR,
 			};
 
 			tasks.push(task);

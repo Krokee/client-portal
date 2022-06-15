@@ -8,27 +8,15 @@ layout: "base.njk"
 
 
 <h2>Tâches</h2>
-{% for item in collections.tasks %}
-	{{ item.templateContent | safe }}
-{% endfor %}
+
+{% include "tasks.njk" %}
+
 
 <h2>Documents</h2>
-<ul>
-{% for document in documents %}
-	<li>
-		<a href="{{document.link}}" target="_blank" rel="noopener noreferrer">
-		{{document.title}}
-		</a>
-	</li>
-{% endfor %}
-</ul>
+
+{% include "documents.njk" %}
 
 <h2>Liens utiles</h2>
-<ul>
-{% for link in links %}
-	<li>
-		<a href="{{link.url}}" target="_blank" rel="noopener noreferrer">{{link.name}}</a> 
-	</li>
-{% endfor %}
-</ul>
+
+{% include "links.njk" %}
 

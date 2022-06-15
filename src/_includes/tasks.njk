@@ -1,0 +1,11 @@
+{% for task in tasks %}
+
+	{% if task.done %}
+		<i class="fa-solid fa-square-check"></i>
+	{% else %}
+		<i class="fa-solid fa-square"></i>
+	{% endif %}
+	{{task.name}} <em>({{task.actor}})</em>
+	<br>
+
+{% endfor %}
