@@ -13,7 +13,7 @@ module.exports = function (eleventyConfig) {
 	// eleventyConfig.addWatchTarget("./src/js/");
 
 	// eleventyConfig.addPassthroughCopy("src/pics");
-	// eleventyConfig.addPassthroughCopy({ "src/static": "/" });
+	eleventyConfig.addPassthroughCopy("src/favicon");
 
 	// Find and copy any `png` files, maintaining directory structure.
 	// eleventyConfig.addPassthroughCopy("src/**/*.png");
