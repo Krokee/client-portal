@@ -1,0 +1,21 @@
+{
+  "name": "client-portal",
+  "version": "1.0.0",
+  "description": "Portal for clients: documents, dates, TODO...",
+  "main": "index.njk",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Krokee/client-portal.git"
+  },
+  "author": "Romain Koenig",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Krokee/client-portal/issues"
+  },
+  "homepage": "https://github.com/Krokee/client-portal#readme"
+}
