@@ -6,10 +6,11 @@ title: This is CLIENT Portal
 <html lang="en">
 {% include "head.njk" %}
 <body>
-	<h1>Hello - {{title}}</h1>
+	{% include "header.njk" %}
 
 		<h2>Membres de l'équipe</h2>
 		{% include "teammates.njk" %}
 
+	{% include "footer.njk" %}
 </body>
 </html>
