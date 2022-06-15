@@ -19,6 +19,11 @@ title: This is CLIENT Portal
 			{{ item.templateContent | safe }}
 		{% endfor %}
 
+		<h2>Documents</h2>
+		{% for document in documents %}
+			{{document.title}}
+		{% endfor %}
+
 </main>
 	{% include "footer.njk" %}
 </body>
