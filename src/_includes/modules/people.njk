@@ -1,5 +1,4 @@
 {% macro people(name, role, email, site) %}
 <i class="fa-solid fa-user"></i> <mark>{{name}} ({{role}})</mark>
-	<a href="mailto:{{email}}">email</a>
-	- <a href="{{site}}" target="_blank" rel="noopener noreferrer">site</a><br>
+	<a href="mailto:{{email}}"><span class="badge bg-secondary">E-mail</span></a> <a href="{{site}}" target="_blank" rel="noopener noreferrer"><span class="badge bg-secondary">Site</span></a><br>
 {% endmacro %}
