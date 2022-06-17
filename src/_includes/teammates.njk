@@ -1,7 +1,7 @@
+{% from "./modules/people.njk" import people %}
+
 {% for teammate in collections.teammates %}
 
-	<i class="fa-solid fa-person-digging"></i>
-	{{teammate.data.name}} ({{teammate.data.role}})
-		<a href="mailto:{{teammate.data.email}}">email</a>
-	 - <a href="{{teammate.data.site}}" target="_blank" rel="noopener noreferrer">site</a><br>
+	{{ people(teammate.data.name, teammate.data.role, teammate.data.email, teammate.data.site) }}
+
 {% endfor %}
