@@ -1,5 +1,5 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
-
+require('dotenv').config();
 
 module.exports = async function () {
 
@@ -7,7 +7,7 @@ module.exports = async function () {
 	const API_KEY = 'keygc919YSkuyLBXY';
 	const BASE_ID = 'app2RUotDJV0yzK71';
 	const TABLE_ID = 'tbl7oLWMpNVPqean5';
-	const VIEW = "ALL";
+	const VIEW = process.env.AIRTABLE_VIEW;
 
 
 	let json = await EleventyFetch(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}?maxRecords=100&view=${VIEW}`, {
@@ -27,6 +27,8 @@ module.exports = async function () {
 	for (const key in json.records) {
 		if (Object.hasOwnProperty.call(json.records, key)) {
 			const element = json.records[key];
+
+			console.log(element);
 
 			const document = {
 				title: element.fields.Name,

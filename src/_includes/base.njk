@@ -3,16 +3,14 @@ title: This is CLIENT Portal
 template: "base.njk"
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 {% include "head.njk" %}
 <body>
 	{% include "header.njk" %}
 
 <main>
-
-	<div class="container">
-		{{ content | safe}}
-	</div>
+	
+	{{ content | safe}}
 
 </main>
 	{% include "footer.njk" %}

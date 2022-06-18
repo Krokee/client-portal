@@ -1,5 +1,5 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
-
+require('dotenv').config();
 
 module.exports = async function () {
 
@@ -7,7 +7,7 @@ module.exports = async function () {
 	const API_KEY = 'keygc919YSkuyLBXY';
 	const BASE_ID = 'app2RUotDJV0yzK71';
 	const TABLE_ID = 'tblsleW9gqttBLFkS';
-	const VIEW = "ALL";
+	const VIEW = process.env.AIRTABLE_VIEW;
 
 
 	let json = await EleventyFetch(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}?maxRecords=100&view=${VIEW}`, {
@@ -35,6 +35,8 @@ module.exports = async function () {
 				name: element.fields.Name,
 				done: element.fields.isdone ? true : false,
 				actor: element.fields.ACTOR,
+				due_date: element.fields.Échéance,
+				details: element.fields.Notes,
 			};
 
 			tasks.push(task);

@@ -1,7 +1,37 @@
+<h2>Documents</h2>
+
+	<div class="row g-4">
+
+
 {% for document in documents %}
-	<a href="{{document.link}}" target="_blank" rel="noopener noreferrer">
+	{# <a href="{{document.link}}" target="_blank" rel="noopener noreferrer">
 	<i class="fa-solid fa-file"></i>
 	{{document.title}} ({{document.date}}) <em>{{document.description}}</em>
-	</a><br>
+	</a><br> #}
+
+
+	
+	<div class="col-lg-3 col-md-4 col-sm-6 wol-xs-12">
+		<div class="card">
+			<div class="card-header
+			{% if document.type == "Compte-rendu" %}
+				bg-primary
+			{% elif document.type == "Référence" %}
+				bg-secondary
+			{% endif %}			
+			text-white">
+				{{document.type}}
+			</div>
+			<div class="card-body">
+				<h3 class="card-title">{{document.title}}</h3>
+				<h4 class="card-subtitle mb-2 text-muted">{{document.date}}</h6>
+				<p class="card-text">{{document.description}}</p>
+				<a href="{{document.link}}" target="_blank"
+					rel="noopener noreferrer" class=" btn btn-outline-primary"><i class="fa-solid fa-file"></i> Ouvrir</a>
+			</div>
+		</div>
+	</div>
 
 {% endfor %}
+
+	</div>	
