@@ -1,0 +1,11 @@
+body {
+	background-image: url("/pics/background.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+  }
+
+  .container {
+	background-color: #FFFFFF;
+  }

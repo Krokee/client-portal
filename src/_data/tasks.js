@@ -35,6 +35,8 @@ module.exports = async function () {
 				name: element.fields.Name,
 				done: element.fields.isdone ? true : false,
 				actor: element.fields.ACTOR,
+				due_date: element.fields.Échéance,
+				details: element.fields.Notes,
 			};
 
 			tasks.push(task);

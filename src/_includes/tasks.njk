@@ -1,3 +1,5 @@
+<h2>Tâches</h2>
+
 {% for task in tasks %}
 
 	{% if task.done %}
@@ -5,7 +7,7 @@
 	{% else %}
 		<i class="fa-solid fa-square"></i>
 	{% endif %}
-	{{task.name}} <em>({{task.actor}})</em>
+	{{task.name}} <em>({{task.actor.join(", ")}})</em> {{task.details}} {{task.due_date}}
 	<br>
 
 {% endfor %}

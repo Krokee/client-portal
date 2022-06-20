@@ -28,6 +28,8 @@ module.exports = async function () {
 		if (Object.hasOwnProperty.call(json.records, key)) {
 			const element = json.records[key];
 
+			console.log(element);
+
 			const document = {
 				title: element.fields.Name,
 				date: element.fields.Date,
