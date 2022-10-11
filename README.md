@@ -2,3 +2,5 @@
 
 # client-portal
 Portal for clients: documents, key dates, todolist...
+
+Public repository
